@@ -1,0 +1,135 @@
+/* line 1, ../../compass/sass/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 1, ../../compass/sass/_home.scss */
+.navbar {
+  height: 80px;
+  background-color: #284741;
+  border-color: black;
+}
+/* line 11, ../../compass/sass/_home.scss */
+.navbar .navbar-left {
+  float: left;
+  width: 50%;
+}
+/* line 16, ../../compass/sass/_home.scss */
+.navbar .navbar-right {
+  width: 50%;
+  float: right;
+}
+/* line 21, ../../compass/sass/_home.scss */
+.navbar img {
+  height: 75px;
+}
+/* line 25, ../../compass/sass/_home.scss */
+.navbar button {
+  float: right;
+  margin: 20px 5px;
+}
+
+/* line 31, ../../compass/sass/_home.scss */
+.coffee-cup-background {
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/coffee.jpg");
+  min-width: 100%;
+  background-position: -368px -500px;
+  background-size: auto;
+}
+
+/* line 40, ../../compass/sass/_home.scss */
+.coffee-cup-text {
+  padding-top: 150px;
+  padding-left: 100px;
+  color: black;
+}
+
+/* line 46, ../../compass/sass/_home.scss */
+.works {
+  height: 75px;
+  background-color: black;
+  color: white;
+}
+
+/* line 52, ../../compass/sass/_home.scss */
+.step-1 {
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/coffeebags.jpg");
+  background-position: 0px -400px;
+  background-size: cover;
+}
+/* line 59, ../../compass/sass/_home.scss */
+.step-1 .title {
+  font-size: 40px;
+}
+/* line 63, ../../compass/sass/_home.scss */
+.step-1 .step-1-text {
+  padding-top: 75px;
+  font-size: 20px;
+  color: white;
+  padding-left: 75px;
+}
+/* line 70, ../../compass/sass/_home.scss */
+.step-1 p {
+  padding-left: 50px;
+}
+
+/* line 75, ../../compass/sass/_home.scss */
+.step-2 {
+  width: 100%;
+  height: 400px;
+  background-color: #edebe6;
+}
+/* line 80, ../../compass/sass/_home.scss */
+.step-2 .step-2-background img {
+  margin-left: 70px;
+  margin-top: 60px;
+  transform: rotate(-10deg);
+  border: 10px solid;
+}
+/* line 87, ../../compass/sass/_home.scss */
+.step-2 .step-2-text {
+  float: left;
+  padding-top: 100px;
+  margin-left: 20%;
+  color: #3a2f27;
+}
+
+/* line 95, ../../compass/sass/_home.scss */
+.step-3 {
+  height: 400px;
+  width: 100%;
+  background: black;
+  color: white;
+}
+/* line 101, ../../compass/sass/_home.scss */
+.step-3 img {
+  width: 100%;
+}
+
+/* line 106, ../../compass/sass/_home.scss */
+#get-started {
+  height: 300px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  width: 100%;
+  background-color: #edebe6;
+  margin-bottom: 50px;
+}
+/* line 114, ../../compass/sass/_home.scss */
+#get-started button {
+  background-color: #284741;
+  height: 60px;
+  width: 200px;
+  margin-top: 50px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* line 123, ../../compass/sass/_home.scss */
+#get-started h3 {
+  margin-top: 15px;
+}
