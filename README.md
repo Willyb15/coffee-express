@@ -91,6 +91,7 @@ router.post('/register', function(req, res, next){
 	res.json(req.body);
 	// res.render('register', {})
 });
+```
 ####Redirect to Register Page if Passwords Don't Match
 ```js
 if(req.body.password != req.body.password2){
