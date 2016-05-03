@@ -85,5 +85,12 @@ router.post('/register', function(req, res, next){
 	newAccount.save();
 	res.json(req.body);
 ```
-
+###Redirect to Register Page if Passwords Don't Match
+```js
+router.post('/register', function(req, res, next){
+// user posted: username, email, password, password2
+if(req.body.password != req.body.password2){
+	res.redirect('/register?failure=password');
+}
+```
 
