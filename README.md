@@ -18,7 +18,7 @@ block content
 					h4 Delivered to your door.
 Blah Blah Blah
 ```
-###Added Register and Login Routes in the index.js to render a Login Page
+###Configured Routes in index.js to render a Redistration Page and Login Page
 ```js
 router.get('/register', function(req, res, next){
 	res.render("register", {});
@@ -33,6 +33,20 @@ router.post('/register', function(req, res, next){
 router.get('/login', function(req, res, next){
 	res.render("login", {});
 });
+```
+###Created Registration Page in register.jade our route points to
+```jade
+Blah Blah Blah
+.row
+	.col-sm-6.registration-form.text-center
+		form(role="form", action="/register", method="post", id="registration-form", name="registration")
+			.form-group
+				label Username:
+				input.form-control(type="text", name="username", placeholder="Will Bryant", minlength="5")
+			.form-group
+				label Password
+				input.form-control(type="password", name="password", placeholder="6 character minimum", minlength="6")
+Blah Blah BLah
 ```
 
 ###Installed mongoose`
