@@ -105,3 +105,4 @@ if(req.body.password != req.body.password2){
 	.col-sm-6.registration-form.text-center
 		form(role="form", action="/register", method="post", id="registration-form", name="registration")
 ```
+###Make all the other pages
