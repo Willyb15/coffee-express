@@ -1,10 +1,10 @@
 #DC Roasters Coffee Beans E-Commerce Site
-##Built with Angular.js and Jade in Express.js
-##Got Express up and running and put compass in there
+##Built with Angular.js and Express.js
+##Got Express up and running and put compass in there - See other readme's for full instruction on installing Express
 ```
-express coffee
+express coffee blah blah blah
 ```
-###Using index.jade + layout. jade began building content section
+###Using index.jade + layout. jade + compass began building and styling Home Page
 ```jade
 extends layout
 block content
@@ -16,9 +16,9 @@ block content
 					h1 A Smarter way to Grind
 					h4 Fresh Coffee Beans. 
 					h4 Delivered to your door.
+Blah Blah Blah
 ```
-
-###Added Register and Login Routes in the index.js
+###Added Register and Login Routes in the index.js to render a Login Page
 ```js
 router.get('/register', function(req, res, next){
 	res.render("register", {});
@@ -38,6 +38,14 @@ router.get('/login', function(req, res, next){
 ###Installed mongoose`
 ```
 npm install mongoose --save
+```
+###Configured Mongo and Mongoose in the index.js 
+```js
+var express = require('express');
+var router = express.Router();
+var mongoUrl = "mongodb://localhost27017/coffee";
+var mongoose = require('mongoose');
+mogoose.connect(mongoUrl);
 ```
 ###Created mondels folder with accounts.js file
 ```js
