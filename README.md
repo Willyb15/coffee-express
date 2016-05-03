@@ -53,12 +53,13 @@ Blah Blah BLah
 ```
 npm install mongoose --save
 ```
-###Configured Mongo and Mongoose in the index.js 
+###Configured Mongo and Mongoose in the index.js and Configure our DB and collection 
 ```js
 var express = require('express');
 var router = express.Router();
-var mongoUrl = "mongodb://localhost27017/coffee";
+var mongoUrl = "mongodb://localhost27017/coffee"; // this will be the DB
 var mongoose = require('mongoose');
+var Account =require('../models/accounts');  //this is where we configure 
 mogoose.connect(mongoUrl);
 ```
 ###Created mondels folder with accounts.js file
@@ -70,7 +71,19 @@ var User = new Schema ({
 	password: String,
 	emailAddress: String
 });
-module.exports = mongoose.model('User', User);
+module.exports = mongoose.model('Account', Account);
+```
+###Configured in index.js Post data to save to Database
+```js
+router.post('/register', function(req, res, next){
+// user posted: username, email, password, password2
+	Account.register(new Account({
+		username: req.body.username, 
+		password: req.body.password,
+		emailAddress: req.body.emailAddress
+	}));
+	newAccount.save();
+	res.json(req.body);
 ```
 
 
