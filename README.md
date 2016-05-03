@@ -66,8 +66,9 @@ mogoose.connect(mongoUrl);
 ```js
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var User = new Schema ({
-	username: String, 
+
+var Account = new Schema({
+	username: String,
 	password: String,
 	emailAddress: String
 });
@@ -76,21 +77,30 @@ module.exports = mongoose.model('Account', Account);
 ###Configured in index.js Post data to save to Database
 ```js
 router.post('/register', function(req, res, next){
-// user posted: username, email, password, password2
-	Account.register(new Account({
-		username: req.body.username, 
+	//The user posted: username, email, password, password2
+	if(req.body.password != req.body.password2){
+		res.redirect('/register?failure=password');
+	}
+	var newAccount = new Account({
+		username: req.body.username,
 		password: req.body.password,
-		emailAddress: req.body.emailAddress
-	}));
+		emailAddress: req.body.email
+	});
+	console.log(newAccount);
 	newAccount.save();
 	res.json(req.body);
-```
-###Redirect to Register Page if Passwords Don't Match
+	// res.render('register', {})
+});
+####Redirect to Register Page if Passwords Don't Match
 ```js
-router.post('/register', function(req, res, next){
-// user posted: username, email, password, password2
 if(req.body.password != req.body.password2){
 	res.redirect('/register?failure=password');
 }
 ```
-
+```jade
+.row
+	if(failure)
+		h2 You must enter same password in both fields!
+	.col-sm-6.registration-form.text-center
+		form(role="form", action="/register", method="post", id="registration-form", name="registration")
+```
