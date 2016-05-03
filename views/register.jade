@@ -1,29 +1,29 @@
 extends layout
 
 block content
-	.container-fluid.content
+	.container-fluid.registration-content
 		.row
 			.col-sm-12.text-center
 				h1 Registration
-				h4 Pick a UserName and Password
+				h4 Choose Username and Password
 			.row
 				if(failure)
 					h2 You must enter same password in both fields!
-				.col-sm-6.registration-form.text-center
+				.col-sm-6.col-sm-offset-3.registration-form.text-center
 					form(role="form", action="/register", method="post", id="registration-form", name="registration")
 						.form-group
 							label Username:
 							input.form-control(type="text", name="username", placeholder="Will Bryant", minlength="5")
 						.form-group
-							label Password
+							label Password:
 							input.form-control(type="password", name="password", placeholder="6 character minimum", minlength="6")
 						.form-group
 							input.form-control(type="password", name="password2", placeholder="Confirm Password", minlength="6")
 						.form-group
-							label Email
+							label Email:
 							input.form-control(type="email", name="email", placeholder="example@example.com")
 						.button-holder
-							button.btn.btn-success(type="submit") Register
+							button.btn.btn-success(type="submit") REGISTER!
 
 
 

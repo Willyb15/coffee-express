@@ -133,3 +133,42 @@ img {
 #get-started h3 {
   margin-top: 15px;
 }
+
+/* line 1, ../../compass/sass/_registration.scss */
+.registration-content {
+  margin-top: 75px;
+  background-color: #edebe6;
+  height: 43em;
+}
+
+/* line 6, ../../compass/sass/_registration.scss */
+.registration-form {
+  margin-top: 10px;
+}
+
+/* line 1, ../../compass/sass/_options.scss */
+.options-content {
+  margin-top: 75px;
+  background-color: #edebe6;
+}
+
+/* line 6, ../../compass/sass/_options.scss */
+.plan-row {
+  diplay: inline;
+}
+/* line 9, ../../compass/sass/_options.scss */
+.plan-row .individual-plan {
+  background: white;
+  border: 35px solid #edebe6;
+  min-width: 350px;
+}
+/* line 15, ../../compass/sass/_options.scss */
+.plan-row .family-plan {
+  background: white;
+  border: 35px solid #edebe6;
+  min-width: 350px;
+}
+/* line 20, ../../compass/sass/_options.scss */
+.plan-row img {
+  width: 100%;
+}

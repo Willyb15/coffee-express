@@ -1,0 +1,23 @@
+.options-content {
+    margin-top: 75px;
+    background-color: #edebe6;
+}
+
+.plan-row {
+    diplay: inline;
+
+    .individual-plan {
+        background: white;
+        border: 35px solid #edebe6;
+        min-width: 350px;
+    }
+
+    .family-plan {
+        background: white;
+        border: 35px solid #edebe6;
+        min-width: 350px;
+    }
+    img{
+    	width:100%;
+    }
+}

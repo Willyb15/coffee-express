@@ -1,0 +1,59 @@
+extends layout
+
+block content
+	.container-fluid.options-content
+		.row
+			.col-sm-12.text-center
+				h1 Tell Me What you Want!!
+				h4 Shipping is Free and you can skip any week!
+		.row
+			.col-sm-10.col-sm-offset-1.plan-row
+				.col-sm-6.individual-plan.text-center
+					h1 Solo Plan
+					h5 For those who drink alone
+					.col-sm-12.image
+						img(src="images/solodrinker.jpg")
+					.col-sm-8.info.text-left		
+						h4 Cups per week:
+						h4 Price per cup:    
+						h4 Weekly Total:      
+						h4 Grind Type:
+					.col-sm-4.price.info
+						h4 14
+						h4 $.50
+						h4 $7.00
+						h5 	
+							select .selectpicker 
+								option Chunky
+								option Coarse
+								option Thin
+					.col-sm-12.text-center.plan-button
+						button.btn.btn-primary(type="button") SUBMIT
+					.col-sm-12.text-center
+						h5 Shipping is always free
+						h5 Skip any week. Cancel anytime
+				.col-sm-6.family-plan.text-center
+					h1 Family Plan
+					h5 For those who drink together
+					.col-sm-12.image
+						img(src="images/coffeedrinkers.jpg")
+					.col-sm-8.info.text-left		
+						h4 Cups per week:     
+						h4 Price per cup:     
+						h4 Weekly Total:      
+						h4 Grind Type:
+					.col-sm-4.price.info
+						h4 40
+						h4 $.45
+						h4 $18.00
+						h5 	
+							select .selectpicker 
+								option Coarse
+								option Chunky
+								option Thin
+					.col-sm-12.text-center.plan-button
+						button.btn.btn-primary(type="button") SUBMIT
+					.col-sm-12.text-center
+						h5 Shipping is always free
+						h5 Skip any week. Cancel anytime
+
