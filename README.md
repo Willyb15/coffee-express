@@ -105,4 +105,67 @@ if(req.body.password != req.body.password2){
 	.col-sm-6.registration-form.text-center
 		form(role="form", action="/register", method="post", id="registration-form", name="registration")
 ```
-###Make all the other pages
+###Or Redirect To Options Page
+#####Make options page in options.jade and added _options.scss 
+###Encrypt Pass Word Inserted into Mongo using bcrypt
+```
+sudo npm install brypt-nodejs --save
+sudo npm install express-session --save
+```
+###Updated router.post config to contain bcrypt data
+```js
+router.post('/register', function(req, res, next) {
+    //The user posted: username, email, password, password2
+    if (req.body.password != req.body.password2) {
+        res.redirect('/register?failure=password');
+    } else {
+        var newAccount = new Account({
+            username: req.body.username,
+            password: bcrypt.hashSync(req.body.password), 
+            emailAddress: req.body.email
+        });
+		console.log(newAccount);
+		newAccount.save();
+		req.session.username =  req.body.username;
+		res.redirect('/options');
+    }
+});
+```
+###Updated index.js and app.js config
+####Updated index.js intro line (also removed line 7 to be put into app.js.)
+```js
+var express = require('express');
+var router = express.Router();
+var mongoUrl = "mongodb://localhost:27017/coffee";
+var mongoose = require('mongoose');
+var Account = require ('../models/accounts');
+var bcrypt = require ('bcrypt-nodejs');
+mongoose.connect(mongoUrl);
+```
+###Updated app.js file in the config and added app.use
+```js
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var routes = require('./routes/index');
+var users = require('./routes/users');
+var session = require ('express-session');
+var app = express();
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+app.use(session({
+  secret: 'dc-4life',
+  resave: false
+})); 
+```
