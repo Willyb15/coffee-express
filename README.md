@@ -1,5 +1,6 @@
 #DC Roasters Coffee Beans E-Commerce Site
 ##Built with Angular.js and Express.js
+##Tried to step by Step record of project. Getting pretty long. But, this is for me, NOT YOU!
 ##Got Express up and running and put compass in there - See other readme's for full instruction on installing Express
 ```
 express coffee blah blah blah
